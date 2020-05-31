@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartConnectorTest", "SmartConnectorTest\SmartConnectorTest.csproj", "{A205F954-AD6A-452A-A6C9-70A88882429F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartConnector.FcmExtension", "SmartConnector.FcmExtension\SmartConnector.FcmExtension.csproj", "{64C07D4B-9474-45FA-974F-ED73647F705F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A205F954-AD6A-452A-A6C9-70A88882429F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A205F954-AD6A-452A-A6C9-70A88882429F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A205F954-AD6A-452A-A6C9-70A88882429F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A205F954-AD6A-452A-A6C9-70A88882429F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C07D4B-9474-45FA-974F-ED73647F705F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C07D4B-9474-45FA-974F-ED73647F705F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C07D4B-9474-45FA-974F-ED73647F705F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C07D4B-9474-45FA-974F-ED73647F705F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27F7A40A-49EA-410B-B678-64E529BAF70D}
+	EndGlobalSection
+EndGlobal

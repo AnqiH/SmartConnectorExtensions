@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectSet ExportMode="Standard" Version="1.4" Note="TypesFirst">
+  <ExportedObjects>
+    <OI NAME="SmartConnector" TYPE="system.base.Folder">
+      <OI NAME="PushProcessorSamples" TYPE="system.base.Folder">
+        <OI NAME="Signal Generator" TYPE="signal.Signal">
+          <PI Name="Value" RefNull="1" Unit="0x20001" />
+        </OI>
+        <OI NAME="TrendLogs" TYPE="system.base.Folder">
+          <OI NAME="Interval Trend" TYPE="trend.TLog">
+            <PI Name="Interval" Value="300000" />
+            <PI Name="LogArray" RefNull="1" Unit="0x20002" />
+            <PI Name="LogPoint" Unit="0x20002">
+              <Reference DeltaFilter="-1" Object="../../Signal Generator" Property="Value" Retransmit="0" TransferRate="10" />
+            </PI>
+            <PI Name="LogSize" Value="4236" />
+            <PI Name="StartTime" Value="Tx04f2283a8306c428" />
+          </OI>
+        </OI>
+        <OI NAME="ExtendedTrendLogs" TYPE="system.base.Folder">
+          <OI NAME="Signal Generator Extended Trend Log" TYPE="trend.ETLog">
+            <PI Name="LogArray" RefNull="1" Unit="0x20002" />
+          </OI>
+        </OI>
+      </OI>
+      <OI NAME="EwsConsumeSample" TYPE="system.base.Folder">
+        <OI NAME="Input1" TYPE="server.point.IV">
+          <PI Name="Value" RefNull="1" Value="10" />
+        </OI>
+        <OI NAME="Input2" TYPE="server.point.IV">
+          <PI Name="Value" RefNull="1" Value="1" />
+        </OI>
+        <OI NAME="Function" TYPE="server.point.SV">
+          <PI Name="Value" RefNull="1" Value="Add" />
+        </OI>
+        <OI NAME="Output1" TYPE="server.point.AV">
+          <PI Name="Value" RefNull="1" Value="11" />
+        </OI>
+        <OI NAME="Input1 Over Time" TYPE="trend.TLog">
+          <PI Name="Interval" Value="10000" />
+          <PI Name="LogArray" RefNull="1" Unit="0x10001" />
+          <PI Name="LogPoint" Unit="0x10001">
+            <Reference DeltaFilter="0" Object="../Input1" Property="Value" Retransmit="0" TransferRate="10" />
+          </PI>
+          <PI Name="LogSize" Value="1000" />
+          <PI Name="StartTime" Value="Tx04e12c09193e3821" />
+        </OI>
+      </OI>
+      <OI NAME="EwsClient" TYPE="system.base.Folder">
+        <OI NAME="ValueItemTest" TYPE="system.base.Folder">
+          <OI DESCR="Numeric Value Description" NAME="Numeric Value" TYPE="server.point.AV" />
+          <OI DESCR="Digital Value Description" NAME="Digital Value" TYPE="server.point.BV" />
+          <OI DESCR="Multistate Value Description" NAME="Multistate Value" TYPE="server.point.IV" />
+          <OI DESCR="String Value Description" NAME="String Value" TYPE="server.point.SV" />
+          <OI DESCR="Time Stamp Value Description" NAME="Time Stamp Value" TYPE="server.point.TS" />
+        </OI>
+      </OI>
+    </OI>
+  </ExportedObjects>
+</ObjectSet>
