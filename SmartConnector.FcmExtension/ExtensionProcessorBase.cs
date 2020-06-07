@@ -12,6 +12,9 @@ using Mongoose.Ews.Server.Data;
 using Mongoose.Ews.Server.Data.Shared;
 using Mongoose.Process;
 using SxL.Common;
+using FirebaseAdmin;
+using FirebaseAdmin.Messaging;
+using Google.Apis.Auth.OAuth2;
 
 namespace SmartConnector.FcmExtension
 {
@@ -83,6 +86,33 @@ namespace SmartConnector.FcmExtension
         /// </summary>
         protected bool IsConnected => DataAdapter != null;
         #endregion
+
+        //protected FirebaseMessaging _messaging = null;
+        /*
+        #region FCM Messaging
+        // Create a firebase app
+        protected FirebaseMessaging _messaging = null;
+        protected FirebaseMessaging Messaging
+        {
+            get
+            {
+                if (_messaging != null) return _messaging;
+                var app = FirebaseApp.Create(new AppOptions()
+                        {
+                                Credential = GoogleCredential.FromFile(@"C:\Users\sesa525401\source\repos\SmartConnectorTest\SmartConnector.FcmExtension\serviceAccountKey.json")
+                                            .CreateScoped("https://www.googleapis.com/auth/firebase.messaging")
+                        });
+                _messaging = FirebaseMessaging.GetMessaging(app);
+                return _messaging;
+            }
+            set
+            {
+                _messaging = value;
+            }
+        }
+        #endregion
+        */
+
 
         #region CreateEwsServer - Virtual
         protected virtual EwsServerDataAdapter CreateEwsServer()

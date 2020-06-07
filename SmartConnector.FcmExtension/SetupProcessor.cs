@@ -11,6 +11,9 @@ using Mongoose.Ews.Server.Data.Shared;
 using Mongoose.Process;
 using Mongoose.Process.Ews;
 using SxL.Common;
+using FirebaseAdmin;
+using FirebaseAdmin.Messaging;
+using Google.Apis.Auth.OAuth2;
 
 namespace SmartConnector.FcmExtension
 {
@@ -26,6 +29,7 @@ namespace SmartConnector.FcmExtension
         public string EwsAddress { get; set; }
         #endregion
 
+
         protected override IEnumerable<Prompt> Execute_Subclass()
         {
             // Make sure to connect to a EWS server
@@ -34,14 +38,20 @@ namespace SmartConnector.FcmExtension
             if (!DataAdapter.Server.IsRunning) DataAdapter.StartServer();
 
             EnsureServerParameters();
-
+            /*
+            if (_messaging == null)
+            {
+                var app = FirebaseApp.Create(new AppOptions()
+                {
+                    Credential = GoogleCredential.FromFile(@"C:\Users\sesa525401\source\repos\SmartConnectorTest\SmartConnector.FcmExtension\serviceAccountKey.json")
+                                            .CreateScoped("https://www.googleapis.com/auth/firebase.messaging")
+                });
+                _messaging = FirebaseMessaging.GetMessaging(app);
+            }
+            */
+            /*
            try
            {
-     
-                Logger.LogStatus(LogCategory.Processor, "setup processor1", $"data sdapter is  {DataAdapter}");
-
-               // var alarmEvents = DataAdapter.AlarmItems.OrderByDescending(x => x.CreatedTime);
-               /*
                 var alarmReader = new AlarmItemReader
                 {
                     Address = this.EwsAddress,
@@ -50,24 +60,35 @@ namespace SmartConnector.FcmExtension
                 };
 
                 var result = alarmReader.ReadData();
+                Logger.LogStatus(LogCategory.Processor, "setup processor alarmReader", $"result is {result}");
+
+                var lastUpdated = alarmReader.LastUpdate;
+                Logger.LogStatus(LogCategory.Processor, "setup processor alarmReader 0", $"last update {lastUpdated}");
+
                 if (result.Success)
                 {
-                    var data = result.DataRead.OrderByDescending(x=> x.Transition).FirstOrDefault();
-                    Logger.LogStatus(LogCategory.Processor, "setup processor2", $"alarm result {data}");
+                    //var data = result.DataRead;
+                    //data.Sort((x, y) => -x.Transition.CompareTo(y.Transition));
+                    //var lastAlarm = data[0];
+                        //OrderByDescending(x=> x.Transition).FirstOrDefault();
+                    Logger.LogStatus(LogCategory.Processor, "setup processor2", $"alarm result {result.DataRead}");
+                    Logger.LogStatus(LogCategory.Processor, "setup processor3", $"last alarm {result.DataRead.Count}");
+
+                   // Cache.AddOrUpdateItem()
+
                 }
                 else
                 {
                     Logger.LogDebug(LogCategory.Processor, $"Alarm read failed.");
                 }
-                */
+
             }
             catch(Exception ex)
            {
                 Logger.LogError(LogCategory.Processor, "setup processor exception", ex.ToString());
            }
-
-
-
+           */
+ 
             return new List<Prompt>();
         }
 

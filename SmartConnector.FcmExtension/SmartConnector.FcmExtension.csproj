@@ -114,28 +114,13 @@
   <ItemGroup>
     <Compile Include="ExtensionProcessorBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Samples\Mongoose\Process\ActionBrokerSampleProcessor.cs" />
-    <Compile Include="Samples\Mongoose\Process\AttributeSampleProcessor.cs" />
-    <Compile Include="Samples\Mongoose\Process\EwsConsumeSampleProcessor.cs" />
-    <Compile Include="Samples\Mongoose\Process\InMemoryCacheAccessProcessor.cs" />
-    <Compile Include="Samples\Mongoose\Process\LoggingProcessor.cs" />
-    <Compile Include="Samples\Mongoose\Process\Person.cs" />
-    <Compile Include="Samples\Mongoose\Process\ProcessorValuesAccessProcessor.cs" />
-    <Compile Include="Samples\Mongoose\Process\SampleConfigurations.cs" />
-    <Compile Include="Samples\Mongoose\Process\Test\EwsClientFixture.cs" />
-    <Compile Include="Samples\Mongoose\Process\Test\EwsConsumeFixture.cs" />
-    <Compile Include="Samples\Mongoose\Process\Test\EwsServerAdapterFixture.cs" />
-    <Compile Include="Samples\Mongoose\Process\Test\ProcessorValuesAccessProcessorFixture.cs" />
     <Compile Include="SetupProcessor.cs" />
     <Compile Include="UpdateProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Data\00 ReadMe.txt" />
-    <Content Include="Samples\Mongoose\Process\SBO Import File.xml" />
+    <None Include="serviceAccountKey.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
