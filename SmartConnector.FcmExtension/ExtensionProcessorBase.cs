@@ -35,7 +35,7 @@ namespace SmartConnector.FcmExtension
         #endregion
 
         #region Password
-        [Required, EncryptedString, DefaultValue("admin123")]
+        [Required, EncryptedString, DefaultValue("Keen3906^")]
         public string Password { get; set; }
         #endregion
 
@@ -86,6 +86,32 @@ namespace SmartConnector.FcmExtension
         /// </summary>
         protected bool IsConnected => DataAdapter != null;
         #endregion
+
+        //protected FirebaseMessaging _messaging = null;
+        /*
+        #region FCM Messaging
+        // Create a firebase app
+        protected FirebaseMessaging _messaging = null;
+        protected FirebaseMessaging Messaging
+        {
+            get
+            {
+                if (_messaging != null) return _messaging;
+                var app = FirebaseApp.Create(new AppOptions()
+                        {
+                                Credential = GoogleCredential.FromFile(@"C:\Users\sesa525401\source\repos\SmartConnectorTest\SmartConnector.FcmExtension\serviceAccountKey.json")
+                                            .CreateScoped("https://www.googleapis.com/auth/firebase.messaging")
+                        });
+                _messaging = FirebaseMessaging.GetMessaging(app);
+                return _messaging;
+            }
+            set
+            {
+                _messaging = value;
+            }
+        }
+        #endregion
+        */
 
 
         #region CreateEwsServer - Virtual
