@@ -12,11 +12,11 @@ using Mongoose.Ews.Server.Data;
 using Mongoose.Ews.Server.Data.Shared;
 using Mongoose.Process;
 using SxL.Common;
-using FirebaseAdmin;
-using FirebaseAdmin.Messaging;
-using Google.Apis.Auth.OAuth2;
+//using FirebaseAdmin;
+//using FirebaseAdmin.Messaging;
+//using Google.Apis.Auth.OAuth2;
 
-namespace SmartConnector.FcmExtension
+namespace SmartConnector.AlarmExtension
 {
     public abstract class ExtensionProcessorBase : Processor
     {

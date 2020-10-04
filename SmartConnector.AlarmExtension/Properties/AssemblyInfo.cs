@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SmartConnector.FcmExtension")]
-[assembly: AssemblyDescription("Update alarms to FCM")]
+[assembly: AssemblyTitle("SmartConnector.AlarmExtension")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SmartConnector.FcmExtension")]
+[assembly: AssemblyProduct("SmartConnector.AlarmExtension")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("64c07d4b-9474-45fa-974f-ed73647f705f")]
+[assembly: Guid("68331d86-76bc-433d-a643-0ac46b0a7194")]
 
 // Version information for an assembly consists of the following four values:
 //
